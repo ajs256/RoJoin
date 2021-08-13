@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "RoJoin",
+    "version": "1.0",
+
+    "description": "Automatically joins Roblox games when a magic query string is added to the URL.",
+    "author": "ajs256",
+
+    "icons": {
+        "48": "icons/rojoin_48.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.roblox.com/games/*"],
+            "js": ["rojoin.js"]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "rojoin@ajs256.test"
+        }
+      }
+}
